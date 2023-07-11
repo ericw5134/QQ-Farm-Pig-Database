@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Asn3</title>
+</head>
+<body onload="constructTable()">
+
+    <header>QQ FARM'S PIG DATABASE</header>
+    <div class="center">
+        <button class="open-button" id="add-pig-btn" onclick="openForm()">Add new piggy</button>
+    </div>
+
+    <section>
+        <table id="main-table"> 
+            <th>Piggies</th>
+            <tr>
+                <td>Name</td>
+                <td>Category</td>
+            </tr>
+        </table>
+    </section>
+    <section id="more-info-table"></section>
+    <!-- reference: https://www.w3schools.com/howto/howto_js_popup_form.asphttps://www.w3schools.com/howto/howto_js_popup_form.asp-->
+    <!-- A button to open the popup form -->
+    <!-- The form -->
+    <section class="form-popup" id="myForm">
+        <form class="form-container">
+        <h1>Add new piggy</h1>
+        <input type="text" placeholder="Enter Name" id="name">
+        <input type="number" placeholder="Enter Height" id="height">
+        <input type="number" placeholder="Enter Weight" id="weight">
+        <input type="text" placeholder="Enter Personality" id="personality">
+        <input type="text" id="breed" placeholder="Enter Breed">
+        <lable for="catagory">Catagories:</lable>
+        <select name="catagory" id="catagory-selector" onclick="check()">
+            <option value="didnotchoose" id="didnotchoose">choose one</option>
+            <option value="grey" id="grey">Grey</option>
+            <option value="chestnut" id="chestnut">Chestnut</option>
+            <option value="white" id="white">White</option>
+            <option value="black" id="black">Black</option>
+        </select>
+        <input type="text" id="dynamic" placeholder="Waiting for catagory input...">
+        <button type="button" class="btn" id="add" onclick="closeForm()">Add</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </section>
+
+    
+
+    <script src="./PiggyModel.js"></script>
+    <script src="./PiggyController.js"></script>
+    <script src="./main.js"></script>
+    <script src="popup_function.js"></script>
+
+</body> 
+</html>

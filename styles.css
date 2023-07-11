@@ -1,0 +1,135 @@
+section {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 250%;
+  margin: 20px 30px 60px;
+}
+
+#main-table {
+  border: 2px solid black;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 30px 20% 50px 60px;
+  width: 100%
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: separate;
+  text-align: left;
+  padding-right: 70px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+#moreinfo, #delete .btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+#info {
+  border: 2px solid black;
+  padding: 30px 20% 50px 60px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+#info #moreinfo-header {
+  font-weight: bold;
+}
+
+/* reference: https://www.w3schools.com/howto/howto_js_popup_form.asphttps://www.w3schools.com/howto/howto_js_popup_form.asp */
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: white;
+  color: black;
+  padding: 5px 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  margin-top: 50px;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  border: 2px solid black;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 15%;
+  padding: 30px 20% 50px 60px;
+  background-color: white;
+  margin-left: 30%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=number] {
+  width: 190%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+
+#catagory-selector {
+  width: 200%;
+  margin: 5px 0 22px 0;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
